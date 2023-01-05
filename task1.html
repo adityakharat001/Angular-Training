@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <section class="col-lg-6 mx-auto">
+      <h1 class="p-4 text-center">Registraion Form</h1>
+      <form
+        action="#"
+        class="mt-2 mb-4"
+        onsubmit="return validateForm()"
+        novalidate
+      >
+        <div class="container">
+          <div class="form-group">
+            <label for="fname">Name :</label>
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              id="fname"
+              onkeyup="validateName()"
+            />
+            <span class="text-danger" id="name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email :</label>
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+              id="email"
+              onkeyup="validateEmail()"
+            />
+            <span class="text-danger" id="email-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="password">Password :</label>
+            <input
+              type="password"
+              class="form-control"
+              name="password"
+              id="password"
+              pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}"
+              onkeyup="validatePassword()"
+            />
+            <span class="text-danger" id="password-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="c_password">Confirm Password :</label>
+            <input
+              type="password"
+              class="form-control"
+              name="c_password"
+              id="c_password"
+              onkeyup="validateC_Password()"
+            />
+            <span class="text-danger" id="c_password-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender :</label><br />
+            <input type="radio" id="male" name="gender" value="male" /><label
+              for="male"
+              required
+              >&nbsp; Male</label
+            >
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+            /><label for="female">&nbsp; Female</label>
+            <span class="text-danger" id="gender-error"></span>
+          </div>
+          <div class="form-group">
+            <label>Hobbies :</label><br />
+            <input
+              type="checkbox"
+              id="drawing"
+              name="hobbies"
+              value="drawing"
+            />
+            <label for="drawing"> Drawing</label>&nbsp;
+            <input
+              type="checkbox"
+              id="singing"
+              name="hobbies"
+              value="singing"
+            />
+            <label for="singing"> Singing</label>&nbsp;
+            <input type="checkbox" id="coding" name="hobbies" value="coding" />
+            <label for="coding"> Coding</label>
+            <span class="text-danger" id="hobbies-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="remark">Remarks :</label>
+            <textarea
+              class="form-control"
+              name="remark"
+              rows="3"
+              id="remark"
+              onkeyup="validateRemarks()"
+            ></textarea>
+            <span class="text-danger" id="remark-error"></span>
+          </div>
+          <div class="form-group">
+            <label>City :</label>
+            <select
+              class="form-control"
+              name="city"
+              id="city"
+              onkeyup="validateCity()"
+            >
+              <option value="0">Select City</option>
+              <option value="navimumbai">Navi Mumbai</option>
+              <option value="mumbai">Mumbai</option>
+              <option value="delhi">Delhi</option>
+            </select>
+            <span class="text-danger" id="city-error"></span>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <input class="btn btn-primary mx-3" type="submit" value="Register" />
+          <input class="btn btn-primary mx-3" type="reset" value="Reset" />
+        </div>
+      </form>
+    </section>
+    <script src="./task1Validation.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
